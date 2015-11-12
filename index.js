@@ -1,7 +1,7 @@
 var fs = require('fs')
   , path = require('path')
   , config = require('./config.json')
-  , ipProxy  = require('./lib/ip-proxy');
+  , basicProxy = require('./lib/basic-proxy');
 
 function printError(err) {
   console.error('[' + new Date().toUTCString() + '] ' + err);
@@ -18,7 +18,7 @@ if (config.options.ssl) {
   }
 }
 
-var proxy = ipProxy.createServer(config.options);
+var proxy = basicProxy.createServer(config.options);
 proxy.on('error', printError);
 proxy.listen(config.port, function () {
   console.log('Starting...');
