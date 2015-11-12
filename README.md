@@ -15,18 +15,17 @@ config example
    "users": {
      "root": "root",
      "admin": "123456",
-     "etc": "o93rf2hi"
-    // "user": "passwd"
+     "etc": "o93rf2hi" // "user": "passwd"
     },
     "targets": [
       {
         "user": "root", // accepted user
-        "url": "http://localhost:80"
+        "url": "http://localhost:80" // target url
       },
       {
         "user": "admin", // accepted user
         "appendHeaders": {
-          "personalId": "a530467209"
+          "personalid": "a530467209"
         },
         "url": "http://localhost:8080"
       }
