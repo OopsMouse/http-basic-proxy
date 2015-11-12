@@ -37,3 +37,8 @@ config example
    "port":"443"
 }
 ```
+
+run
+```
+$ node index.js
+```
